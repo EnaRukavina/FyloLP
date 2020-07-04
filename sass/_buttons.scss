@@ -1,0 +1,72 @@
+////BLUE BUTTON
+
+.btn {
+  background-color: $bright-blue;
+  color: $light-greyish-blue;
+  border: none;
+  font-family: $font-display;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3rem;
+  padding: 0 5rem;
+  border-radius: 2px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  transition: all 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $desaturated-blue;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include respond(smallest) {
+    width: 100%;
+  }
+}
+
+.btn-smaller {
+  padding: 0 2rem;
+}
+
+.cta-btn {
+  &:hover {
+    background-color: $light-greyish-blue;
+    color: $bright-blue;
+  }
+  @include respond(smallest) {
+    width: 100%;
+  }
+}
+
+////CYAN TEXT BUTTON
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-family: $font-display;
+    font-size: 1.2rem;
+    color: $moderate-cyan;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.5px solid $moderate-cyan;
+    transition: all 0.2s;
+    padding-bottom: 4px;
+    cursor: pointer;
+  }
+
+  &::after {
+    content: url(../img/icon-arrow.svg);
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    transition: all 0.2s;
+  }
+  &:hover:after {
+    transform: translateX(3px);
+  }
+}
