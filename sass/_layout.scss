@@ -64,11 +64,9 @@
     right: 1rem;
 
     @include respond(smallest) {
-      width: 25rem;
+      width: 85vw;
     }
-    @include respond(tiny) {
-      width: 20rem;
-    }
+
     @include respond(small) {
       float: none;
     }
@@ -159,6 +157,9 @@
       width: 4rem;
       margin-top: 1rem;
       margin-right: 3px;
+      @include respond(smallest) {
+        margin-bottom: 1rem;
+      }
     }
 
     &__text {

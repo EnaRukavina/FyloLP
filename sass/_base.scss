@@ -37,6 +37,18 @@ $font-display: "Raleway", sans-serif;
       @content;
     }
   }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 68.75em) {
+      //1100px
+      @content;
+    }
+  }
+  @if $breakpoint == huge {
+    @media only screen and (min-width: 120em) {
+      //1920px
+      @content;
+    }
+  }
 }
 
 *,
@@ -56,7 +68,15 @@ html {
   }
 
   @include respond(small) {
-    font-size: 60%;
+    font-size: 70%;
+  }
+
+  @include respond(large) {
+    font-size: 85%;
+  }
+
+  @include respond(huge) {
+    font-size: 100%;
   }
 }
 
@@ -119,7 +139,7 @@ a {
   top: 1rem;
   width: 100%;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 40em) {
     display: none;
   }
 }
@@ -129,7 +149,7 @@ a {
   top: 1rem;
   width: 100%;
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 40em) {
     display: none;
   }
 }
